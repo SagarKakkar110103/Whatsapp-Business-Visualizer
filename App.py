@@ -115,14 +115,14 @@ if uploaded_file is not None:
         if selected == 'Timeline':
             col1, col2 = st.columns(2)
             with col1:
-                timeline = Helper.monthly_timeline(selected_user, df)
-                fig = px.line(timeline , x = 'time', y = 'message' , title = 'User Activity Monthly',
+                timeline = Helper.day_timeline('Sagar', df)
+                fig = px.line(timeline, x='day_name', y='message', title='User Activity DayWise',
                  width=400, height=400)
 
                 fig
             # daily
             with col2:
-                timeline = Helper.day_timeline(selected_user, df)
+                timeline = Helper.day_timeline('Arihan Mech', df)
                 fig = px.line(timeline, x='day_name', y='message', title='User Activity DayWise',
                  width=400, height=400)
                 fig
