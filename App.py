@@ -263,7 +263,7 @@ if selected == "Dashboard":
         import openai
         from streamlit_chat import message
 
-        openai.api_key = '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'
+        openai.api_key = st.secrets['secret']
 
 
         # This function uses the OpenAI Completion API to generate a
